@@ -30,14 +30,23 @@ function drawRow(grid, numColumns) {
 
 function drawGrid(numColumns, numRows) {
     const grid = document.createElement('div');
-
     grid.setAttribute('class', 'grid');
 
-    document.body.prepend(grid);
+    document.body.append(grid);
 
     for (let i = 0; i < numRows; i++) {
         drawRow(grid, numColumns);
     }
 }
+
+function createGrid(squares) {
+    x = 0;
+    y = 0;
+    drawGrid(squares, squares);
+}
+
+const newGrid = document.getElementById('new-grid');
+newGrid.addEventListener('click', () => createGrid(prompt("How many squares per side for the new grid?"))) ;
+
 
 drawGrid(16, 16);
