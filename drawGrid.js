@@ -5,8 +5,6 @@ function drawSquare(row) {
     x++;
     const position = x + ', ' + y;
     const square = document.createElement('div');
-    square.style.width = '16px';
-    square.style.height = '16px';
     square.setAttribute('class', 'square');
     square.setAttribute('id', position);
 
