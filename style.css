@@ -1,0 +1,8 @@
+body {
+    background-color: darkslategray;
+}
+
+.row {
+    display: flex;
+    gap: 0;
+}
