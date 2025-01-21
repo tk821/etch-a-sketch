@@ -9,6 +9,8 @@ function drawSquare(row) {
     square.setAttribute('id', position);
 
     row.appendChild(square);
+
+    square.addEventListener('mouseenter', () => square.style.backgroundColor = 'black');
 }
 
 function drawRow(grid, numColumns) {
@@ -28,10 +30,8 @@ function drawRow(grid, numColumns) {
 
 function drawGrid(numColumns, numRows) {
     const grid = document.createElement('div');
-    grid.setAttribute('display', 'flex');
-    grid.setAttribute('flex-direction', 'column');
-    grid.setAttribute('class', 'grid');
 
+    grid.setAttribute('class', 'grid');
 
     document.body.prepend(grid);
 
