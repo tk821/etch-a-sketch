@@ -42,6 +42,11 @@ function drawGrid(numColumns, numRows) {
 function createGrid(squares) {
     x = 0;
     y = 0;
+
+    const originalGrid = document.getElementsByClassName('grid');
+    originalGrid[0].remove();
+
+
     drawGrid(squares, squares);
 }
 
